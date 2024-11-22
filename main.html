@@ -10,7 +10,11 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			arr = arr.map(Number);
+
+    let uniqueSortedArray = [...new Set(arr)].sort((a, b) => b - a);
+
+    return uniqueSortedArray.length > 1 ? uniqueSortedArray[1] : -Infinity;
 		}
 
 		function Main() {
